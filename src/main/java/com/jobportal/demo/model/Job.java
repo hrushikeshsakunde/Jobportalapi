@@ -14,7 +14,7 @@ import java.util.Date;
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
         allowGetters = true)
 public class Job  implements Serializable   {
-	
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,8 +35,7 @@ public class Job  implements Serializable   {
     private String offer;
   
 	private String location;
-    
-    @NotBlank
+
     private Date beginning;
     
     @NotBlank
@@ -51,9 +50,15 @@ public class Job  implements Serializable   {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
-    private Date updatedAt;  
-    
-    
+    private Date updatedAt;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
     
     public String getTitle() {
 		return title;
@@ -131,9 +136,9 @@ public class Job  implements Serializable   {
 		this.beginning = beginning;
 		this.companyName = companyName;
 	}
-	
-	
-	
+
+	public Job(){}
+
     
     
 }
