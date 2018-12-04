@@ -13,6 +13,8 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
         allowGetters = true)
+/**  Defines job structure
+ */
 public class Job  implements Serializable   {
 
 	@Id

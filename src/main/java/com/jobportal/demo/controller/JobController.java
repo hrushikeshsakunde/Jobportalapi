@@ -40,6 +40,7 @@ public class JobController {
 	  @PostMapping("/jobs")
 	  public Job createJob(@Valid @RequestBody Job job) {
 	      return jobRepository.save(job);
+
 	  }
 	  
 	  
