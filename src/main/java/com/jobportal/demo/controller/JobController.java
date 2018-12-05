@@ -66,16 +66,8 @@ public class JobController {
 
 	      Job job = jobRepository.findById(Long.parseLong(jobId))
 	              .orElseThrow(() -> new ResourceNotFoundException("Job", "id", jobId));
-	      job.setBeginning(jobDetails.getBeginning());
-	      job.setCompanyName(jobDetails.getCompanyName());
-	      job.setContent(jobDetails.getContent());
-	      job.setLocation(jobDetails.getLocation());
-	      job.setOffer(jobDetails.getOffer());
-	      job.setTitle(jobDetails.getTitle());
-	      job.setProfile(jobDetails.getProfile());
-	      job.setTasks(jobDetails.getTasks());
 
-	      Job updatedJob = jobRepository.save(job);
+	      Job updatedJob = jobRepository.save(jobDetails);
 	      return updatedJob;
 	  }
 	  

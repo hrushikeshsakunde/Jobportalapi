@@ -27,10 +27,8 @@ public class Job  implements Serializable   {
     @NotBlank
     private String content;
     
-    @NotBlank
     private String tasks;
-    
-    @NotBlank
+
     private String profile;
     
     @NotBlank
